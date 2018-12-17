@@ -1,3 +1,4 @@
+//RGB거리
 #include <iostream>
 
 #define MIN(X, Y) ((X) < (Y) ? (X) : (Y))
