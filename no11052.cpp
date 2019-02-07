@@ -16,9 +16,9 @@ int main(){
     ans[1] = c[1];
     
     for(int i = 2; i <= n; i++){
-        int temp = 2000000000;
+        int temp = -1;
         for(int j = 1; j <= i; j++){
-            temp = min(ans[i-j] + c[j], temp);
+            temp = max(ans[i-j] + c[j], temp);
         }
         ans[i] = temp;
     }
