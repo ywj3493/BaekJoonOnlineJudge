@@ -23,14 +23,14 @@ int main(){
     }
     while(!qu.empty()){
         int cx, cy, cz;
-        tie(cx, cy, cz) = qu.front();
+        tie(cz, cy, cx) = qu.front();
         qu.pop();
         for(int i = 0; i < 6; i++){
             int nx = cx + dx[i];
             int ny = cy + dy[i];
             int nz = cz + dz[i];
             if(nx>=0&&nx<m&&ny>=0&&ny<n&&nz>=0&&nz<h&&arr[nz][ny][nx]==0){
-                qu.push(make_tuple(nx,ny,nz));
+                qu.push(make_tuple(nz,ny,nx));
                 arr[nz][ny][nx] = arr[cz][cy][cx] + 1;
             }
         }
