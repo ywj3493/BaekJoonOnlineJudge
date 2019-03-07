@@ -27,8 +27,8 @@ int main(){
             d[cur] = true;
             st.pop();
             c[i]++;
-            for(int i = 0; i < ve[cur].size(); i++){
-                int next = ve[cur][i];
+            for(int j = 0; j < ve[cur].size(); j++){
+                int next = ve[cur][j];
                 if(!d[next]){
                     st.push(next);
                     d[next] = true;
